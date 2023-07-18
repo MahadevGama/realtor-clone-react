@@ -1,9 +1,25 @@
-
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Home from "./pages/Home";
+import SignIn from "./pages/Sign-In";
+import SignUp from "./pages/Sign-Up.jsx";
+import ForgotPassword from "./pages/Forgot-Password";
+import Offers from "./pages/Offers";
 
 function App() {
   return (
     <div>
-      <h1 className='text-6xl bg-red-400'>Mahadev</h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Sign-In" element={<SignIn/>}/>
+          <Route path="/Sign-Up" element={<SignUp/>}/>
+          <Route path="/Forgot-Password" element={<ForgotPassword/>}/>
+          <Route path="/Offers" element={<Offers/>}/>
+
+          
+          
+        </Routes>
+      </Router>
     </div>
   );
 }
