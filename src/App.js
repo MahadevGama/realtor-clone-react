@@ -4,11 +4,13 @@ import SignIn from "./pages/Sign-In";
 import SignUp from "./pages/Sign-Up.jsx";
 import ForgotPassword from "./pages/Forgot-Password";
 import Offers from "./pages/Offers";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div>
       <Router>
+        <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/Sign-In" element={<SignIn/>}/>
