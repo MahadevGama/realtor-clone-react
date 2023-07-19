@@ -6,7 +6,7 @@ export default function Header() {
 const location=useLocation();
 const navigate=useNavigate();
 
-function pathMatchRoute(route){
+function MatchPathRoute(route){
     if(route===location.pathname){
         return true;
     }
@@ -23,9 +23,9 @@ function pathMatchRoute(route){
         <div>
 
           <ul className='flex space-x-10'>
-            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/")&&"text-black border-b-red-700"}`} onClick={()=>navigate("/")} >Home</li>
-            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/Offers")&&"text-black border-b-red-700"}`} onClick={()=>navigate("/Offers")}>Offers</li>
-            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${pathMatchRoute("/Sign-In")&&"text-black border-b-red-700"}`}  onClick={()=>navigate("/Sign-In")}>SignIn</li>
+          <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/") && "text-black border-b-red-500"}`} onClick={()=>navigate("/")}>Home</li>
+            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/offers") && "text-black border-b-red-700"}`} onClick={()=>navigate("/Offers")}>Offers</li>
+            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/sign-in") && "text-black border-b-red-700"}`}  onClick={()=>navigate("/sign-in")}>SignIn</li>
           </ul>
 
         </div>
